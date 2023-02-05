@@ -29,8 +29,8 @@
     "index.d.ts"
   ],
   "dependencies": {
-    "mdast-heading-id": "github:BISM-Team/md-heading-id",
-    "micromark-heading-id": "github:BISM-Team/md-heading-id",
+    "mdast-heading-id": "../mdast-heading-id",
+    "micromark-heading-id": "../micromark-heading-id",
     "unist-util-visit": "^4.1.0"
   },
   "devDependencies": {

@@ -31,9 +31,6 @@
     "rimraf": "^3.0.2",
     "typescript": "^4.6.2"
   },
-  "dependencies": {
-    "remark-custom-heading-id": "github:BISM-Team/md-heading-id"
-  },
   "scripts": {
     "build": "npm run build --workspaces",
     "lint:prettier": "prettier --check .",

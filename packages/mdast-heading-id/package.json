@@ -32,7 +32,7 @@
     "@types/unist": "^2.0.6",
     "mdast-util-from-markdown": "^1.2.0",
     "mdast-util-to-markdown": "^1.5.0",
-    "micromark-heading-id": "github:BISM-Team/md-heading-id"
+    "micromark-heading-id": "../micromark-heading-id"
   },
   "scripts": {
     "prepack": "npm run build",
