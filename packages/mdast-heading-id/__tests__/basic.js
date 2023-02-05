@@ -1,13 +1,13 @@
 import {fromMarkdown} from 'mdast-util-from-markdown';
 import {micromarkHeadingId} from 'micromark-heading-id';
-import {mdastHeadingId} from '../index.js';
+import {fromMarkdownExtension} from '../index.js';
 
 describe('mdast plugin', () => {
   it('emits id node', () => {
     expect(
       fromMarkdown(`# simple id {#my-id-is-this-one}`, {
         extensions: [micromarkHeadingId()],
-        mdastExtensions: [mdastHeadingId()],
+        mdastExtensions: [fromMarkdownExtension],
       })
     ).toMatchInlineSnapshot(`
       Object {

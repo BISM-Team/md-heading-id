@@ -4,7 +4,7 @@
 
 import {visit} from 'unist-util-visit';
 import {micromarkHeadingId} from 'micromark-heading-id';
-import {mdastHeadingId} from 'mdast-heading-id';
+import {fromMarkdownExtension, toMarkdownExtension} from 'mdast-heading-id';
 
 /** @type {import('unified').Plugin<[], Root>} */
 export function remarkHeadingId() {
@@ -20,7 +20,8 @@ export function remarkHeadingId() {
   }
 
   add('micromarkExtensions', micromarkHeadingId());
-  add('fromMarkdownExtensions', mdastHeadingId());
+  add('fromMarkdownExtensions', fromMarkdownExtension);
+  add('toMarkdownExtensions', toMarkdownExtension);
 
   return function (node) {
     visit(node, 'idString', (node, _, parent) => {
