@@ -6,15 +6,9 @@ import {visit} from 'unist-util-visit';
 import {micromarkHeadingId} from 'micromark-heading-id';
 import {fromMarkdownExtension, toMarkdownExtension} from 'mdast-heading-id';
 
-/**
- * @typedef {{auto_id: boolean, randomizer: (() => string)}} HeaderIdOptions
- */
-
-/** @type {import('unified').Plugin<[HeaderIdOptions?]|Array<void>, Root>} */
-export function remarkHeadingId(options) {
+/** @type {import('unified').Plugin<[], Root>} */
+export function remarkHeadingId() {
   const data = this.data();
-  const put_random_id = options ? options.auto_id : undefined;
-  const randomizer = options ? options.randomizer : undefined;
 
   /**
    * @param {string} key
@@ -42,9 +36,7 @@ export function remarkHeadingId(options) {
           node.children.filter(child => child.type === 'idString')
         );
 
-      if (ids.length == 0 && !put_random_id) return;
-      if (ids.length == 0 && put_random_id && randomizer)
-        node.children.concat({type: 'idString', value: randomizer()});
+      if (ids.length == 0) return;
       if (ids.length > 1)
         throw new Error(`Found ${ids.length} ids under heading ${node}.`);
 
