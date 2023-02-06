@@ -1,7 +1,7 @@
 import {remark} from 'remark';
 import html from 'remark-rehype';
 import stringify from 'rehype-stringify';
-import {remarkHeadingId} from '../index.js';
+import remarkHeadingId from '../index.js';
 
 describe('plugin with vanilla remark', function () {
   it('should parse well', function () {

@@ -1,4 +1,4 @@
-import {remarkHeadingId} from '../index.js';
+import remarkHeadingId from '../index.js';
 import {compile} from '@mdx-js/mdx';
 import {VFile} from 'vfile';
 

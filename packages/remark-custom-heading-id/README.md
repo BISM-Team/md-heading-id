@@ -16,7 +16,7 @@ $ npm install remark-custom-heading-id --save
 ### ... with vanilla Remark
 
 ```js
-import {remarkHeadingId} from 'remark-custom-heading-id';
+import remarkHeadingId from 'remark-custom-heading-id';
 import {remark} from 'remark';
 import html from 'remark-rehype';
 import stringify from 'rehype-stringify';
@@ -35,7 +35,7 @@ console.log(String(result));
 ### ... with MDX Remark
 
 ```js
-import {remarkHeadingId} from 'remark-custom-heading-id';
+import remarkHeadingId from 'remark-custom-heading-id';
 import {remark} from 'remark';
 import remarkMdx from 'remark-mdx';
 import html from 'remark-rehype';
@@ -57,7 +57,7 @@ console.log(String(result));
 ### ... with MDX-based plugins (e.g. next-mdx-remote)
 
 ```js
-import {remarkHeadingId} from 'remark-custom-heading-id';
+import remarkHeadingId from 'remark-custom-heading-id';
 import {serialize} from 'next-mdx-remote/serialize'; // or similar...
 
 export default async function getMdxProps(source) {
