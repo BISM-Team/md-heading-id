@@ -6,7 +6,7 @@ import {visit} from 'unist-util-visit';
 import {micromarkHeadingId} from 'micromark-heading-id';
 import {fromMarkdownExtension, toMarkdownExtension} from 'mdast-heading-id';
 
-/** @type {import('unified').Plugin<[], Root>} */
+/** @type {import('unified').Plugin<[]|Array<void>, Root>} */
 export function remarkHeadingId() {
   const data = this.data();
 
