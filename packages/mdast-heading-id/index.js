@@ -2,7 +2,6 @@
  * @typedef {import('mdast-util-from-markdown').Extension} FromMarkdownExtension
  * @typedef {import('mdast-util-to-markdown').Options} ToMarkdownOptions
  * @typedef {import('./tree-extension').MdIdString} MdIdString
- * @typedef {import('./tree-extension')} DoNotTouchAsThisImportIncludesDirectivesInTree
  */
 
 /** Extension for `mdast-util-from-markdown` to enable IDs.

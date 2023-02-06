@@ -1,5 +1,7 @@
 /**
  * @typedef {import('mdast').Root} Root
+ * 
+ * @typedef {import('mdast-heading-id/tree-extension')} DoNotTouchAsThisImportIncludesDirectivesInTree
  */
 
 import {visit} from 'unist-util-visit';
