@@ -29,7 +29,7 @@ export const fromMarkdownExtension = {
 export const toMarkdownExtension = {
   handlers: {
     idString: node => {
-      if (node && node.value) return '${' + node.value + '}';
+      if (node && node.value) return '{#' + node.value + '}';
       else
         throw new Error(
           "Can't stringify empty id because parser hangs on empty ids"
